@@ -141,3 +141,73 @@
 
 </body>
 </html>
+/* قسم المنتجات */
+        .products-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1a252f;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .product-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin: 15px 10px 8px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 800;
+            color: #0d6efd;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            background-color: #198754;
+            color: white;
+            padding: 8px 25px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: #157347;
+        }
