@@ -1,241 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saphir Shop | متجر إلكتروني</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #172554;
-    }
-    header {
-      background: #10234f;
-      color: white;
-      padding: 25px 15px;
-      text-align: center;
-    }
-    header h1 { margin: 0 0 10px; }
-    nav {
-      background: #fff;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 8px #ddd;
-    }
-    nav a {
-      color: #10234f;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-    }
-    .hero {
-      text-align: center;
-      padding: 35px 15px;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .product {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 4px 14px #00000010;
-    }
-    .product .photo {
-      font-size: 65px;
-      padding: 20px;
-    }
-    .price {
-      color: #087f5b;
-      font-size: 21px;
-      font-weight: bold;
-    }
-    button {
-      border: 0;
-      border-radius: 8px;
-      padding: 12px 18px;
-      background: #10234f;
-      color: white;
-      cursor: pointer;
-      font-size: 15px;
-    }
-    button:hover { background: #244a91; }
-    #cart, #order {
-      max-width: 700px;
-      margin: 25px auto;
-      padding: 22px;
-      background: white;
-      border-radius: 12px;
-    }
-    input, textarea {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      margin: 12px 0;
-      border: 1px solid #ccd3df;
-      border-radius: 7px;
-      font-size: 16px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 25px;
-      text-align: center;
-      background: #10234f;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saphir Shop | المتجر الإلكتروني الأفضل</title>
+    <!-- استدعاء خط Cairo الاحترافي من Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* التنسيقات الأساسية */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        /* شريط التنبيهات العلوي */
+        .top-bar {
+            background-color: #1a252f;
+            color: #ffffff;
+            text-align: center;
+            padding: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* شريط الهيدر */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #0d6efd;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #0d6efd;
+        }
+
+        /* الواجهة الرئيسية (Hero Banner) */
+        .hero {
+            background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .btn-main {
+            background-color: #ffc107;
+            color: #000;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 25px;
+            font-size: 18px;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .btn-main:hover {
+            background-color: #e0a800;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>Saphir Shop</h1>
-  <p>اكتشف منتجاتنا وتسوق بكل سهولة</p>
-</header>
+    <!-- شريط التنبيهات -->
+    <div class="top-bar">
+        🚚 التوصيل متوفر لجميع الولايات | الدفع عند الاستلام
+    </div>
 
-<nav>
-  <a href="#products">المنتجات</a>
-  <a href="#cart">سلة المشتريات</a>
-  <a href="#order">اطلب الآن</a>
-</nav>
+    <!-- الهيدر -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">💎 Saphir Shop</a>
+            <ul class="nav-links">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#products">المنتجات</a></li>
+                <li><a href="#contact">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<section class="hero">
-  <h2>مرحبا بيك في Saphir Shop 💎</h2>
-  <p>الجودة، الأناقة والتسوق السهل حتى لباب دارك</p>
-</section>
-
-<h2 id="products" style="text-align:center">منتجاتنا</h2>
-
-<section class="products">
-  <div class="product">
-    <div class="photo">🎧</div>
-    <h3>سماعات لاسلكية</h3>
-    <p>سماعات للاستعمال اليومي</p>
-    <p class="price">3500 دج</p>
-    <button onclick="addToCart('سماعات لاسلكية',3500)">
-      أضف إلى السلة
-    </button>
-  </div>
-
-  <div class="product">
-    <div class="photo">⌚</div>
-    <h3>ساعة ذكية</h3>
-    <p>تصميم عصري وأنيق</p>
-    <p class="price">4500 دج</p>
-    <button onclick="addToCart('ساعة ذكية',4500)">
-      أضف إلى السلة
-    </button>
-  </div>
-
-  <div class="product">
-    <div class="photo">🔌</div>
-    <h3>شاحن سريع</h3>
-    <p>شاحن للاستخدام اليومي</p>
-    <p class="price">1800 دج</p>
-    <button onclick="addToCart('شاحن سريع',1800)">
-      أضف إلى السلة
-    </button>
-  </div>
-</section>
-
-<section id="cart">
-  <h2>🛒 سلة المشتريات</h2>
-  <div id="cartItems">السلة فارغة</div>
-  <h3>المجموع: <span id="total">0</span> دج</h3>
-</section>
-
-<section id="order">
-  <h2>📦 معلومات الطلب</h2>
-  <form id="orderForm">
-    <input id="customerName" placeholder="الاسم الكامل" required>
-    <input id="phone" type="tel" placeholder="رقم الهاتف" required>
-    <input id="wilaya" placeholder="الولاية" required>
-    <textarea id="address" placeholder="العنوان بالتفصيل" required></textarea>
-    <button type="submit">إرسال الطلب عبر واتساب</button>
-  </form>
-  <p style="font-size:13px;color:#666">
-    هذا نموذج تجريبي. لازم تربط رقم واتساب تاعك قبل استقبال الطلبات.
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 Saphir Shop - جميع الحقوق محفوظة</p>
-</footer>
-
-<script>
-  const cart = [];
-
-  function addToCart(name, price) {
-    cart.push({ name, price });
-    renderCart();
-  }
-
-  function renderCart() {
-    const items = document.getElementById('cartItems');
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-
-    items.innerHTML = cart.length
-      ? cart.map((item, index) =>
-          `<p>${item.name} - ${item.price} دج
-          <button onclick="removeItem(${index})">حذف</button></p>`
-        ).join('')
-      : 'السلة فارغة';
-
-    document.getElementById('total').textContent = total;
-  }
-
-  function removeItem(index) {
-    cart.splice(index, 1);
-    renderCart();
-  }
-
-  document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    if (cart.length === 0) {
-      alert('زيد منتج واحد على الأقل للسلة قبل الطلب');
-      return;
-    }
-
-    const name = document.getElementById('customerName').value;
-    const phone = document.getElementById('phone').value;
-    const wilaya = document.getElementById('wilaya').value;
-    const address = document.getElementById('address').value;
-
-    const products = cart.map(item =>
-      `${item.name}: ${item.price} دج`
-    ).join('\n');
-
-    const message =
-      `طلب جديد من Saphir Shop\n` +
-      `الاسم: ${name}\nالهاتف: ${phone}\n` +
-      `الولاية: ${wilaya}\nالعنوان: ${address}\n` +
-      `المنتجات:\n${products}\n` +
-      `المجموع: ${cart.reduce((s, i) => s + i.price, 0)} دج`;
-
-    const YOUR_WHATSAPP_NUMBER = '213XXXXXXXXX';
-
-    if (YOUR_WHATSAPP_NUMBER.includes('X')) {
-      alert('الموقع تجريبي. لازم تبدل رقم واتساب في الكود برقمك.');
-      return;
-    }
-
-    window.open(
-      'https://wa.me/' + YOUR_WHATSAPP_NUMBER +
-      '?text=' + encodeURIComponent(message),
-      '_blank'
-    );
-  });
-</script>
+    <!-- الواجهة الرئيسية -->
+    <section class="hero">
+        <h1>أفضل المنتجات بأسعار استثنائية 🛍️</h1>
+        <p>تسوق بكل أمان مع ضمان الجودة والتوصيل السريع لـ 58 ولاية</p>
+        <a href="#products" class="btn-main">تسوق الآن</a>
+    </section>
 
 </body>
 </html>
