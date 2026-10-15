@@ -1,103 +1,241 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Saphir Shop — اكتشف منتجات مختارة مع الطلب والدفع عند الاستلام داخل الجزائر.">
-<meta name="theme-color" content="#10131a">
-<title>Saphir Shop | تسوّق بثقة</title>
-<style>
-:root{--bg:#f7f7f5;--ink:#171923;--muted:#70727d;--gold:#c9a45c;--dark:#10131a;--card:#fff;--line:#e8e6e0}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink)}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.topbar{background:#0b0d12;color:#fff;text-align:center;padding:9px 12px;font-size:12px}.topbar span{color:#e7c77f}.header{background:var(--dark);color:#fff;padding:16px 5%;display:flex;align-items:center;justify-content:space-between;gap:14px;border-bottom:1px solid #2b2d34}.brand{font-size:22px;font-weight:900;letter-spacing:1.4px}.brand b{color:var(--gold)}.nav{display:flex;gap:20px;font-size:13px;color:#e5e5e7}.cart{border:1px solid #555966;background:transparent;color:#fff;border-radius:99px;padding:9px 13px;white-space:nowrap}.hero{background:radial-gradient(ellipse at 75% 20%,#34313a 0%,#191b24 42%,#0e1016 100%);color:#fff;padding:56px 6% 60px;position:relative;overflow:hidden}.hero:after{content:"S";position:absolute;left:4%;top:-70px;font-size:390px;line-height:1;color:#ffffff08;font-weight:900;pointer-events:none}.hero-inner{max-width:1050px;margin:auto;position:relative;z-index:1}.eyebrow{color:#e4c47f;letter-spacing:2px;font-size:11px;font-weight:700}.hero h1{font-size:clamp(34px,7vw,60px);line-height:1.16;margin:15px 0;max-width:650px}.hero p{color:#d0d1d7;line-height:1.9;max-width:520px;font-size:15px}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:7px;padding:13px 20px;background:var(--gold);color:#161616;font-weight:800;cursor:pointer}.btn-outline{background:transparent;border:1px solid #666975;color:#fff;margin-right:8px}.trust{display:flex;flex-wrap:wrap;gap:18px;margin-top:27px;color:#e4e4e7;font-size:12px}.trust span:before{content:"✓";color:var(--gold);font-weight:bold;margin-left:7px}.section{max-width:1120px;margin:auto;padding:42px 5%}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:22px}.section h2{font-size:25px;margin:0 0 8px}.sub{color:var(--muted);font-size:13px;line-height:1.7;margin:0}.tag{font-size:11px;color:#896a2e;background:#f1e6cf;padding:7px 10px;border-radius:99px}.products{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.product{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 5px 18px #17192308}.photo{height:155px;background:linear-gradient(135deg,#eeece6,#d9d6cf);display:flex;align-items:center;justify-content:center;color:#777;font-size:13px;position:relative}.photo .placeholder{font-size:38px;color:#9c8b67}.photo small{position:absolute;bottom:9px;right:10px;background:#ffffffd9;padding:5px 8px;border-radius:5px;font-size:10px;color:#444}.product-info{padding:13px}.product h3{font-size:15px;margin:0 0 7px}.product p{font-size:12px;color:var(--muted);line-height:1.6;min-height:38px;margin:0 0 12px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:7px}.price{font-weight:900;font-size:16px}.add{border:0;background:var(--dark);color:white;border-radius:6px;padding:9px 11px;font-size:12px;cursor:pointer}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.feature{border:1px solid var(--line);border-radius:10px;padding:16px;background:#fff}.feature .ico{font-size:23px}.feature h3{font-size:13px;margin:9px 0 5px}.feature p{font-size:11px;color:var(--muted);line-height:1.7;margin:0}.order-layout{display:grid;grid-template-columns:1fr;gap:18px}.order-box{background:#fff;border:1px solid var(--line);padding:19px;border-radius:12px}.order-box h3{margin:0 0 6px}.field{margin-top:13px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:6px}.field input,.field select,.field textarea{width:100%;border:1px solid #dddde2;border-radius:7px;padding:12px;background:#fff;outline-color:var(--gold)}.field textarea{min-height:72px;resize:vertical}.cart-list{font-size:13px;line-height:1.8;color:var(--muted);margin:12px 0}.total{border-top:1px solid var(--line);padding-top:12px;display:flex;justify-content:space-between;font-weight:900}.full{width:100%;margin-top:15px}.notice{font-size:11px;color:var(--muted);line-height:1.7;margin-top:10px}.footer{background:var(--dark);color:#fff;padding:27px 5%;text-align:center}.footer .brand{font-size:19px}.footer p{color:#b7b8bf;font-size:12px;line-height:1.8}.tiny{font-size:10px;color:#858792}
-@media(min-width:700px){.hero{padding-top:82px;padding-bottom:82px}.products{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}.photo{height:210px}.product-info{padding:16px}.order-layout{grid-template-columns:1.1fr .9fr}.section{padding-top:58px;padding-bottom:58px}.nav{display:flex}}
-@media(max-width:520px){.nav{display:none}.header{padding:14px 4%}.brand{font-size:19px}.hero{padding:44px 5%}.hero h1{font-size:36px}.hero p{font-size:13px}.btn{padding:12px 15px}.btn-outline{margin-right:4px}.section{padding:34px 4%}.section-head{align-items:start;flex-direction:column}.features{grid-template-columns:1fr}.feature{display:flex;gap:12px;align-items:center}.feature h3{margin-top:0}.feature .ico{min-width:30px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saphir Shop | متجر إلكتروني</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #172554;
+    }
+    header {
+      background: #10234f;
+      color: white;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header h1 { margin: 0 0 10px; }
+    nav {
+      background: #fff;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 8px #ddd;
+    }
+    nav a {
+      color: #10234f;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 35px 15px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      text-align: center;
+      box-shadow: 0 4px 14px #00000010;
+    }
+    .product .photo {
+      font-size: 65px;
+      padding: 20px;
+    }
+    .price {
+      color: #087f5b;
+      font-size: 21px;
+      font-weight: bold;
+    }
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 18px;
+      background: #10234f;
+      color: white;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover { background: #244a91; }
+    #cart, #order {
+      max-width: 700px;
+      margin: 25px auto;
+      padding: 22px;
+      background: white;
+      border-radius: 12px;
+    }
+    input, textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccd3df;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    footer {
+      margin-top: 40px;
+      padding: 25px;
+      text-align: center;
+      background: #10234f;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-<div class="topbar">تسوّق بسهولة • <span>الدفع عند الاستلام</span> • توصيل حسب الولاية</div>
-<header class="header">
-  <a class="brand" href="#"><b>SAPHIR</b> SHOP</a>
-  <nav class="nav"><a href="#products">المنتجات</a><a href="#why">علاش تختارنا</a><a href="#order">اطلب الآن</a></nav>
-  <button class="cart" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">السلة <span id="cartCount">0</span> 🛍</button>
+
+<header>
+  <h1>Saphir Shop</h1>
+  <p>اكتشف منتجاتنا وتسوق بكل سهولة</p>
 </header>
-<main>
+
+<nav>
+  <a href="#products">المنتجات</a>
+  <a href="#cart">سلة المشتريات</a>
+  <a href="#order">اطلب الآن</a>
+</nav>
+
 <section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">WELCOME TO SAPHIR SHOP</div>
-    <h1>اختيارات ذكية،<br>وتسوّق بلا تعقيد.</h1>
-    <p>اكتشف منتجات مختارة بعناية. شوف المنتج، اختار الكمية، وابعث طلبك بسهولة مع الدفع عند الاستلام.</p>
-    <a class="btn" href="#products">اكتشف المنتجات ←</a>
-    <a class="btn btn-outline" href="#order">كيفاه تطلب؟</a>
-    <div class="trust"><span>طلب سهل</span><span>الدفع عند الاستلام</span><span>خدمة زبائن</span></div>
+  <h2>مرحبا بيك في Saphir Shop 💎</h2>
+  <p>الجودة، الأناقة والتسوق السهل حتى لباب دارك</p>
+</section>
+
+<h2 id="products" style="text-align:center">منتجاتنا</h2>
+
+<section class="products">
+  <div class="product">
+    <div class="photo">🎧</div>
+    <h3>سماعات لاسلكية</h3>
+    <p>سماعات للاستعمال اليومي</p>
+    <p class="price">3500 دج</p>
+    <button onclick="addToCart('سماعات لاسلكية',3500)">
+      أضف إلى السلة
+    </button>
+  </div>
+
+  <div class="product">
+    <div class="photo">⌚</div>
+    <h3>ساعة ذكية</h3>
+    <p>تصميم عصري وأنيق</p>
+    <p class="price">4500 دج</p>
+    <button onclick="addToCart('ساعة ذكية',4500)">
+      أضف إلى السلة
+    </button>
+  </div>
+
+  <div class="product">
+    <div class="photo">🔌</div>
+    <h3>شاحن سريع</h3>
+    <p>شاحن للاستخدام اليومي</p>
+    <p class="price">1800 دج</p>
+    <button onclick="addToCart('شاحن سريع',1800)">
+      أضف إلى السلة
+    </button>
   </div>
 </section>
-<section class="section" id="products">
-  <div class="section-head"><div><h2>المنتجات المختارة</h2><p class="sub">بدّل المنتجات التجريبية بسلعك الحقيقية والأسعار تاعك.</p></div><span class="tag">NEW COLLECTION</span></div>
-  <div class="products" id="productGrid"></div>
+
+<section id="cart">
+  <h2>🛒 سلة المشتريات</h2>
+  <div id="cartItems">السلة فارغة</div>
+  <h3>المجموع: <span id="total">0</span> دج</h3>
 </section>
-<section class="section" id="why">
-  <div class="section-head"><div><h2>تسوّق بثقة</h2><p class="sub">تجربة بسيطة وواضحة من أول زيارة حتى تأكيد الطلب.</p></div></div>
-  <div class="features">
-    <div class="feature"><div class="ico">📦</div><div><h3>توصيل للولايات</h3><p>تأكّد من تغطية شركة التوصيل لولايتك قبل إرسال الطلب.</p></div></div>
-    <div class="feature"><div class="ico">💵</div><div><h3>الدفع عند الاستلام</h3><p>تدفع كي توصلك السلعة، حسب شروط شركة التوصيل.</p></div></div>
-    <div class="feature"><div class="ico">🤝</div><div><h3>تأكيد الطلب</h3><p>نتواصلو معاك لتأكيد تفاصيل المنتج والعنوان قبل الإرسال.</p></div></div>
-  </div>
+
+<section id="order">
+  <h2>📦 معلومات الطلب</h2>
+  <form id="orderForm">
+    <input id="customerName" placeholder="الاسم الكامل" required>
+    <input id="phone" type="tel" placeholder="رقم الهاتف" required>
+    <input id="wilaya" placeholder="الولاية" required>
+    <textarea id="address" placeholder="العنوان بالتفصيل" required></textarea>
+    <button type="submit">إرسال الطلب عبر واتساب</button>
+  </form>
+  <p style="font-size:13px;color:#666">
+    هذا نموذج تجريبي. لازم تربط رقم واتساب تاعك قبل استقبال الطلبات.
+  </p>
 </section>
-<section class="section" id="order">
-  <div class="section-head"><div><h2>كمّل طلبك</h2><p class="sub">اختار المنتج وعمّر معلومات التوصيل.</p></div></div>
-  <div class="order-layout">
-    <div class="order-box"><h3>معلومات الزبون</h3><p class="sub">اكتب معلومات صحيحة باش نقدروا نأكدوا الطلب.</p>
-      <form id="orderForm">
-        <div class="field"><label for="customer">الاسم الكامل</label><input id="customer" required placeholder="الاسم واللقب"></div>
-        <div class="field"><label for="phone">رقم الهاتف</label><input id="phone" required inputmode="tel" placeholder="05 / 06 / 07" pattern="[0-9+ ()-]{8,18}"></div>
-        <div class="field"><label for="wilaya">الولاية</label><select id="wilaya" required><option value="">اختار الولاية</option><option>أدرار</option><option>الشلف</option><option>الأغواط</option><option>أم البواقي</option><option>باتنة</option><option>بجاية</option><option>بسكرة</option><option>بشار</option><option>البليدة</option><option>البويرة</option><option>تمنراست</option><option>تبسة</option><option>تلمسان</option><option>تيارت</option><option>تيزي وزو</option><option>الجزائر</option><option>الجلفة</option><option>جيجل</option><option>سطيف</option><option>سعيدة</option><option>سكيكدة</option><option>سيدي بلعباس</option><option>عنابة</option><option>قالمة</option><option>قسنطينة</option><option>المدية</option><option>مستغانم</option><option>المسيلة</option><option>معسكر</option><option>ورقلة</option><option>وهران</option><option>البيض</option><option>إليزي</option><option>برج بوعريريج</option><option>بومرداس</option><option>الطارف</option><option>تندوف</option><option>تيسمسيلت</option><option>الوادي</option><option>خنشلة</option><option>سوق أهراس</option><option>تيبازة</option><option>ميلة</option><option>عين الدفلى</option><option>النعامة</option><option>عين تموشنت</option><option>غرداية</option><option>غليزان</option><option>تيميمون</option><option>برج باجي مختار</option><option>أولاد جلال</option><option>بني عباس</option><option>عين صالح</option><option>عين قزام</option><option>تقرت</option><option>جانت</option><option>المغير</option><option>المنيعة</option></select></div>
-        <div class="field"><label for="address">العنوان والبلدية</label><textarea id="address" required placeholder="البلدية، الحي، العنوان..."></textarea></div>
-        <div class="field"><label for="delivery">طريقة الاستلام</label><select id="delivery"><option>توصيل للمنزل</option><option>استلام من المكتب</option></select></div>
-        <button class="btn full" type="submit">إرسال الطلب عبر واتساب</button>
-        <p class="notice">مهم: زر الطلب يحتاج رقم واتساب الخاص بالمتجر داخل الكود قبل استعماله مع الزبائن. ما تدخلش بيانات زبائن حقيقية في النسخة التجريبية.</p>
-      </form>
-    </div>
-    <aside class="order-box"><h3>ملخّص السلة</h3><p class="sub">المنتجات اللي اخترتها تظهر هنا.</p><div id="cartItems" class="cart-list">السلة فارغة حاليًا.</div><div class="total"><span>المجموع</span><span id="cartTotal">0 دج</span></div><p class="notice">مصاريف التوصيل ما هيش محسوبة، لأنها تختلف حسب الولاية وشركة التوصيل. المنتجات والأسعار الحالية أمثلة فقط.</p></aside>
-  </div>
-</section>
-</main>
-<footer class="footer"><div class="brand"><b>SAPHIR</b> SHOP</div><p>شكراً على ثقتكم. نتمنّاو لكم تجربة تسوّق مريحة.</p><div class="tiny">© <span id="year"></span> Saphir Shop</div></footer>
+
+<footer>
+  <p>© 2026 Saphir Shop - جميع الحقوق محفوظة</p>
+</footer>
+
 <script>
-const products = [
- {id:1,name:"منتج تجريبي 01",desc:"اكتب هنا وصف قصير وواضح للمنتج.",price:2500,icon:"✦"},
- {id:2,name:"منتج تجريبي 02",desc:"أضف أهم ميزة تخلي الزبون يهتم بالمنتج.",price:1800,icon:"◇"},
- {id:3,name:"منتج تجريبي 03",desc:"بدّل النص والصورة والسعر حسب سلعتك.",price:3200,icon:"✧"},
- {id:4,name:"منتج تجريبي 04",desc:"تقدر تزيد منتجات أخرى لاحقًا.",price:2200,icon:"◈"}
-];
-const cart = {};
-const money = n => new Intl.NumberFormat('fr-DZ').format(n) + " دج";
-function renderProducts(){
- document.getElementById('productGrid').innerHTML=products.map(p=>`<article class="product"><div class="photo"><span class="placeholder">${p.icon}</span><small>صورة المنتج هنا</small></div><div class="product-info"><h3>${p.name}</h3><p>${p.desc}</p><div class="price-row"><span class="price">${money(p.price)}</span><button class="add" onclick="addToCart(${p.id})">+ أضف للسلة</button></div></div></article>`).join('');
-}
-function addToCart(id){cart[id]=(cart[id]||0)+1;renderCart();}
-function renderCart(){
- const ids=Object.keys(cart);const count=ids.reduce((s,id)=>s+cart[id],0);const total=ids.reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
- document.getElementById('cartCount').textContent=count;document.getElementById('cartTotal').textContent=money(total);
- document.getElementById('cartItems').innerHTML=ids.length?ids.map(id=>{const p=products.find(x=>x.id==id);return `${p.name} × ${cart[id]} — ${money(p.price*cart[id])} <button type="button" onclick="removeOne(${id})" aria-label="حذف قطعة">−</button>`}).join('<br>'):'السلة فارغة حاليًا.';
-}
-function removeOne(id){if(cart[id]>1)cart[id]--;else delete cart[id];renderCart();}
-document.getElementById('orderForm').addEventListener('submit',function(e){
- e.preventDefault();
- if(!Object.keys(cart).length){alert('زيد منتج للسلة قبل ما تبعث الطلب.');return;}
- const name=document.getElementById('customer').value.trim();
- const phone=document.getElementById('phone').value.trim();
- const wilaya=document.getElementById('wilaya').value;
- const address=document.getElementById('address').value.trim();
- const delivery=document.getElementById('delivery').value;
- const items=Object.keys(cart).map(id=>{const p=products.find(x=>x.id==id);return `${p.name} × ${cart[id]} = ${money(p.price*cart[id])}`}).join('\n');
- const total=Object.keys(cart).reduce((s,id)=>s+products.find(p=>p.id==id).price*cart[id],0);
- const message=`طلب جديد من Saphir Shop\nالاسم: ${name}\nالهاتف: ${phone}\nالولاية: ${wilaya}\nالعنوان: ${address}\nالاستلام: ${delivery}\nالمنتجات:\n${items}\nالمجموع بدون التوصيل: ${money(total)}`;
- const STORE_WHATSAPP_NUMBER = ""; // اكتب رقم واتساب المتجر بصيغة دولية، أرقام فقط، مثال 213XXXXXXXXX
- if(!STORE_WHATSAPP_NUMBER){alert('الموقع جاهز للتجربة، لكن لازم نضيف رقم واتساب المتجر للكود قبل استقبال الطلبات.');return;}
- window.open('https://wa.me/'+STORE_WHATSAPP_NUMBER+'?text='+encodeURIComponent(message),'_blank');
-});
-document.getElementById('year').textContent=new Date().getFullYear();
-renderProducts();renderCart();
+  const cart = [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    renderCart();
+  }
+
+  function renderCart() {
+    const items = document.getElementById('cartItems');
+    const total = cart.reduce((sum, item) => sum + item.price, 0);
+
+    items.innerHTML = cart.length
+      ? cart.map((item, index) =>
+          `<p>${item.name} - ${item.price} دج
+          <button onclick="removeItem(${index})">حذف</button></p>`
+        ).join('')
+      : 'السلة فارغة';
+
+    document.getElementById('total').textContent = total;
+  }
+
+  function removeItem(index) {
+    cart.splice(index, 1);
+    renderCart();
+  }
+
+  document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (cart.length === 0) {
+      alert('زيد منتج واحد على الأقل للسلة قبل الطلب');
+      return;
+    }
+
+    const name = document.getElementById('customerName').value;
+    const phone = document.getElementById('phone').value;
+    const wilaya = document.getElementById('wilaya').value;
+    const address = document.getElementById('address').value;
+
+    const products = cart.map(item =>
+      `${item.name}: ${item.price} دج`
+    ).join('\n');
+
+    const message =
+      `طلب جديد من Saphir Shop\n` +
+      `الاسم: ${name}\nالهاتف: ${phone}\n` +
+      `الولاية: ${wilaya}\nالعنوان: ${address}\n` +
+      `المنتجات:\n${products}\n` +
+      `المجموع: ${cart.reduce((s, i) => s + i.price, 0)} دج`;
+
+    const YOUR_WHATSAPP_NUMBER = '213XXXXXXXXX';
+
+    if (YOUR_WHATSAPP_NUMBER.includes('X')) {
+      alert('الموقع تجريبي. لازم تبدل رقم واتساب في الكود برقمك.');
+      return;
+    }
+
+    window.open(
+      'https://wa.me/' + YOUR_WHATSAPP_NUMBER +
+      '?text=' + encodeURIComponent(message),
+      '_blank'
+    );
+  });
 </script>
+
 </body>
 </html>
